@@ -1,7 +1,10 @@
 import ThemeToggle from './shared/ThemeToggle';
+import LanguagePicker from './shared/LanguagePicker';
+import { useTranslation } from '../core/lang/LanguageContext';
 import { useTheme } from '../core/ThemeProvider';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const { mode } = useTheme();
 
   return (
@@ -9,15 +12,12 @@ const Navbar = () => {
       mode === 'game' ? 'bg-black/80 backdrop-blur-md border-b border-cyan-900/50' : 'bg-white/80 backdrop-blur-sm'
     }`}>
       <div className="text-xl font-black tracking-tighter">
-        Julian Pedroza Garcia<span className={mode === 'game' ? 'text-cyan-400' : 'text-blue-600'}>.</span>
+        {t('name')}
+        <span className={mode === 'game' ? 'text-cyan-400' : 'text-blue-600'}>.</span>
       </div>
-      
       <div className="flex items-center gap-8">
-        <ul className="flex gap-6 text-sm font-medium uppercase tracking-widest">
-          <li className="hover:opacity-50 cursor-pointer" href="#projects">Projects</li>
-          <li className="hover:opacity-50 cursor-pointer" href="#skills">Skills</li>
-        </ul>
         <ThemeToggle />
+        <LanguagePicker />
       </div>
     </nav>
   );

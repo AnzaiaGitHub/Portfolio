@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useTheme } from '../../core/ThemeProvider';
+import { useTranslation } from '@core/lang/LanguageContext';
 
 const Contact = () => {
     const { mode } = useTheme();
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -24,14 +26,13 @@ const Contact = () => {
         
         // Simple validation
         if (!formData.name || !formData.email || !formData.message) {
-        setStatus('Please fill out all fields');
+        setStatus(t('contact.fillAllFields'));
         return;
         }
 
         // Here you would typically send the data to a server
         // For now, we'll just show a success message
-        console.log('Form submitted:', formData);
-        setStatus('Message sent successfully! I\'ll get back to you soon.');
+        setStatus(t('contact.msgSentSuccesfully'));
         
         // Reset form
         setFormData({ name: '', email: '', message: '' });
@@ -69,7 +70,7 @@ const Contact = () => {
             <h3 className={`text-xl font-semibold mb-6 ${
                 mode === 'game' ? 'text-cyan-400 uppercase' : 'text-slate-900'
             }`}>
-                Get in Touch
+                {t('contact.getInTouch')}
             </h3>
             {contactMethods.map((method, idx) => (
                 <div
@@ -90,7 +91,7 @@ const Contact = () => {
                     mode === 'game'
                         ? 'text-cyan-400 hover:underline'
                         : 'text-blue-600 hover:underline'
-                    }>Visit</a>
+                    }>{t('contact.go')}</a>
                 </div>
             ))}
             </div>
@@ -100,7 +101,7 @@ const Contact = () => {
             <input
                 type="text"
                 name="name"
-                placeholder="Your Name"
+                placeholder={t('contact.namePH')}
                 value={formData.name}
                 onChange={handleChange}
                 className={`w-full px-4 py-2 border outline-none transition-all ${
@@ -113,7 +114,7 @@ const Contact = () => {
             <input
                 type="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder={t('contact.emailPH')}
                 value={formData.email}
                 onChange={handleChange}
                 className={`w-full px-4 py-2 border outline-none transition-all ${
@@ -125,7 +126,7 @@ const Contact = () => {
             
             <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder={t('contact.messagePH')}
                 value={formData.message}
                 onChange={handleChange}
                 rows="5"
@@ -138,13 +139,13 @@ const Contact = () => {
 
             <button
                 type="submit"
-                className={`w-full py-2 font-semibold transition-all ${
+                className={`w-full py-2 font-semibold transition-all cursor-pointer ${
                 mode === 'game'
                     ? 'border border-cyan-500 text-cyan-400 hover:shadow-[0_0_15px_rgba(0,242,255,0.4)] hover:bg-cyan-950'
                     : 'border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
                 }`}
             >
-                Send Message
+                {t('contact.sendBtn')}
             </button>
 
             {status && (

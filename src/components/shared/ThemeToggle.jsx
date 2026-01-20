@@ -1,5 +1,8 @@
-import { useTheme } from '../../core/ThemeProvider';
+import { useTheme } from '@core/ThemeProvider';
+import { useTranslation } from '@core/lang/LanguageContext';
+
 const ThemeToggle = () => {
+  const { t } = useTranslation();
   const { mode, toggleMode } = useTheme();
 
   return (
@@ -11,7 +14,7 @@ const ThemeToggle = () => {
           : 'bg-slate-800 text-white hover:bg-slate-700'
       }`}
     >
-      {mode === 'game' ? 'See Software Portfolio' : 'Enjoy Game Porfolio'}
+      {mode === 'game' ? t('hero.game.seePortfolio') : t('hero.software.seePortfolio')}
     </button>
   );
 };

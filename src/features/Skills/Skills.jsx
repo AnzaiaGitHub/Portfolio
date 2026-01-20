@@ -1,25 +1,27 @@
-import { useTheme } from '../../core/ThemeProvider';
-import { techStack } from '../../data/techStack';
+import { useTheme } from '@core/ThemeProvider';
+import { techStack } from '@data/techStack';
+import { useTranslation } from '@core/lang/LanguageContext';
 import SkillIcon from './skillIcon';
 
 const Skills = () => {
   const { mode } = useTheme();
+  const { t } = useTranslation();
 
   const skillCategories = [
     {
-        category: 'Frontend',
+        category: 'frontend',
         skills: [techStack.react, techStack.javascript, techStack.typescript, techStack.tailwind, techStack.css]
     },
     {
-        category: 'Backend',
+        category: 'backend',
         skills: [techStack.node, techStack.postgresql, techStack.mysql, techStack.restApi, techStack.nestjs]
     },
     {
-        category: 'Game Development',
+        category: 'gameDevelopment',
         skills: [techStack.unity, techStack.cSharp]
     },
     {
-        category: 'Tools & Others',
+        category: 'toolsAndOthers',
         skills: [techStack.github, techStack.vite, techStack.postman, techStack.swiftUI, techStack.redis]
     }
   ];
@@ -38,7 +40,7 @@ const Skills = () => {
           <h3 className={`text-xl font-semibold mb-4 ${
             mode === 'game' ? 'text-cyan-400 uppercase' : 'text-slate-900'
           }`}>
-            {skillCategory.category}
+            {t(`skills.${skillCategory.category}`)}
           </h3>
           <ul className={`space-y-2 ${
             mode === 'game' ? 'text-cyan-300' : 'text-slate-600'

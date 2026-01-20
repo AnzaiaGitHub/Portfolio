@@ -6,6 +6,7 @@ export const ThemeProvider = ({ children }) => {
   // Check local storage or default to 'software'
   const [mode, setMode] = useState(localStorage.getItem('app-mode') || 'software');
 
+
   const toggleMode = () => {
     const newMode = mode === 'software' ? 'game' : 'software';
     setMode(newMode);

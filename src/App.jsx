@@ -8,11 +8,13 @@ import Contact from './features/contact/Contact';
 import CustomCursor from './components/shared/CustomCursor';
 import SectionLayout from './components/shared/SectionLayout';
 import Navbar from './components/Navbar';
+import { LanguageProvider } from './core/lang/LanguageContext';
 
 function App() {
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
+    <LanguageProvider>
     <ThemeProvider>
       {/* Custom Cursor is a great 'Multimedia Engineer' touch */}
       {!isMobile && <CustomCursor />}
@@ -22,9 +24,9 @@ function App() {
         <Hero />
         
         <main>
-          <SectionLayout title="Projects"><ProjectGrid /></SectionLayout>
-          <SectionLayout title="Skills"><Skills /></SectionLayout>
-          <SectionLayout title="Contact"><Contact /></SectionLayout>
+          <SectionLayout sectionHeader="projects"><ProjectGrid /></SectionLayout>
+          <SectionLayout sectionHeader="skills"><Skills /></SectionLayout>
+          <SectionLayout sectionHeader="contact"><Contact /></SectionLayout>
         </main>
 
         <footer className="py-10 text-center opacity-50">
@@ -32,6 +34,7 @@ function App() {
         </footer>
       </div>
     </ThemeProvider>
+    </LanguageProvider>
   );
 }
 
