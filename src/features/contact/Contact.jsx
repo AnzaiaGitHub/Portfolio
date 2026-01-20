@@ -50,7 +50,7 @@ const Contact = () => {
         },
         {
             label: 'LinkedIn',
-            value: 'julian-pedroza-garcia',
+            value: 'in/julian-pedroza-garcia',
             icon: '🔗',
             href: 'https://www.linkedin.com/in/julian-pedroza-garcia/'
         },
@@ -64,10 +64,10 @@ const Contact = () => {
 
     return (
         <div className="max-w-2xl mx-auto" id="contact">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-end">
             {/* Contact Methods */}
             <div className="space-y-4">
-            <h3 className={`text-xl font-semibold mb-6 ${
+            <h3 className={`text-xl md:text-3xl font-semibold mb-6 ${
                 mode === 'game' ? 'text-cyan-400 uppercase' : 'text-slate-900'
             }`}>
                 {t('contact.getInTouch')}
@@ -81,23 +81,30 @@ const Contact = () => {
                     : 'border border-slate-300 shadow-sm hover:shadow-md transition-shadow'
                 }`}
                 >
-                    <p className={`text-sm opacity-75 ${mode === 'game' ? 'text-cyan-300' : 'text-slate-600'}`}>
-                        {method.icon} {method.label}
-                    </p>
-                    <p className={`font-mono ${mode === 'game' ? 'text-cyan-400' : 'text-slate-900'}`}>
+                    <div className="flex justify-between items-center mb-2 text-sm md:text-xl">
+                        <p className={`opacity-75 ${mode === 'game' ? 'text-cyan-300' : 'text-slate-600'}`}>
+                            {method.icon} {method.label}
+                        </p>
+                        <a href={method.href} target="_blank" rel="noopener noreferrer" className={
+                        mode === 'game'
+                            ? 'text-cyan-400 underline hover:text-cyan-200'
+                            : 'text-blue-400 underline hover:text-blue-800'
+                        }>{t('contact.go')}</a>
+                    </div>
+                    <p className={`font-mono text-xs md:text-lg ${mode === 'game' ? 'text-cyan-400' : 'text-slate-900'}`}>
                     {method.value}
                     </p>
-                    <a href={method.href} target="_blank" rel="noopener noreferrer" className={
-                    mode === 'game'
-                        ? 'text-cyan-400 hover:underline'
-                        : 'text-blue-600 hover:underline'
-                    }>{t('contact.go')}</a>
                 </div>
             ))}
             </div>
 
             {/* Contact Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
+            <h3 className={`text-xl md:text-2xl font-semibold mb-6 ${
+                mode === 'game' ? 'text-cyan-400 uppercase' : 'text-slate-900'
+            }`}>
+                {t('contact.demoForm')}
+            </h3>
             <input
                 type="text"
                 name="name"

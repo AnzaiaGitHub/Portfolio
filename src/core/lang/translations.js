@@ -6,13 +6,13 @@ export const translations = {
         name: "Julian Pedroza Garcia",
         hero: {
             game: {
-                title: "Hey, This is my amazing Game Portfolio!",
+                title: "Amazing, You just found my Video Game Portfolio!",
                 subtitle: "Embark on a journey through my game development projects, where creativity meets code and performance meets engineering systems.",
                 seePortfolio: "See Software Portfolio",
             },
             software: {
                 title: "Hi, Welcome to my Software Developer Portfolio!",
-                subtitle: "Explore my projects showcasing my skills in software development, engineering and problem solving.",
+                subtitle: "Explore the projects that showcase my skills in software development, engineering and problem solving.",
                 seePortfolio: "Explore the VideoGames Dimension",
             },
         },
@@ -36,6 +36,7 @@ export const translations = {
             go: "Go to Link",
             fillAllFields: "Please fill out all fields.",
             msgSentSuccesfully: "Message sent successfully! I\'ll get back to you soon.",
+            demoForm: "Demo Form",
         },
         languages: {
             en: "English",
@@ -46,13 +47,13 @@ export const translations = {
         name: "Julián Pedroza García",
         hero: {
             game: {
-                title: "Hey, ¡Este es mi gran portafolio de juegos!",
+                title: "Genial, ¡Acabas de encontrar mi portafolio de Videojuegos!",
                 subtitle: "Embárcate en un viaje a través de mis proyectos de desarrollo de juegos, donde la creatividad se encuentra con el código y el rendimiento con los sistemas de ingeniería.",
                 seePortfolio: "Ver Portafolio de Software",
             },
             software: {
                 title: "Hola, ¡Bienvenido a mi portafolio de desarrollador de software!",
-                subtitle: "Explora mis proyectos que muestran mis habilidades en desarrollo de software, ingeniería y resolución de problemas.",
+                subtitle: "Explora los proyectos que muestran mis habilidades en desarrollo de software, ingeniería y resolución de problemas.",
                 seePortfolio: "Explora la dimensión de Videojuegos",
             },
         },
@@ -76,6 +77,7 @@ export const translations = {
             go: "Ir al Link",
             fillAllFields: "Por favor completa todos los campos.",
             msgSentSuccesfully: "¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.",
+            demoForm: "Formulario de Demostración",
         },
         languages: {
             en: "Inglés",

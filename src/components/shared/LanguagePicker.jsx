@@ -20,14 +20,14 @@ const LanguagePicker = () => {
       <select
         onChange={(e) => changeLanguage(e.target.value)}
         value={lang}
-        className={`block appearance-none w-full border px-4 py-2 pr-8 rounded-full shadow leading-tight focus:outline-none focus:shadow-outline text-sm font-medium cursor-pointer transition-colors
+        className={`block appearance-none w-full border px-2 py-2 pr-6 rounded-full shadow leading-tight focus:outline-none focus:shadow-outline text-xs md:text-sm font-medium cursor-pointer transition-colors
           ${mode === 'game'
             ? 'bg-cyan-500 text-black border-cyan-500 hover:bg-cyan-400'
             : 'bg-slate-800 text-white border-slate-800 hover:bg-slate-700'
           }`}
       >
         {Object.entries(languages).map(([code, name]) => (
-          <option key={code} value={code}>{name}</option>
+          <option key={code} value={code} className="text-sm cursor-pointer">{name}</option>
         ))}
       </select>
       <div className={`pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 
