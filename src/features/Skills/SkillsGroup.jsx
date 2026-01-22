@@ -7,10 +7,10 @@ const SkillsGroup = ({ idx, category, skills, mode }) => {
   return (
     <div
       key={idx}
-      className={`p-2 md:p-6 ${
+      className={`p-2 md:p-6 border ${
         mode === 'game'
-          ? 'border border-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.3)]'
-          : 'border border-slate-300 shadow-sm'
+          ? 'border-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.3)]'
+          : 'border-slate-300 shadow-sm'
       }`}
     >
       <h3 className={`text-md md:text-2xl font-semibold mb-6 md:mb-8 ${

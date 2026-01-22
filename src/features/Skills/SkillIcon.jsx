@@ -8,7 +8,7 @@ const SkillIcon = ({ iconPath, name, mode }) => {
     >
       <div className={`relative flex items-center justify-center transition-all duration-500 ${
         mode === 'game' 
-          ? 'w-10 h-10 bg-slate-700 border-2 border-cyan-500/30 rotate-45 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_#22d3ee]' 
+          ? 'w-10 h-10 bg-slate-700 border-4 border-cyan-500/80 rotate-45 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_#22d3ee] animate-border-rotate-dots' 
           : 'w-12 h-12 bg-slate-50 rounded-full group-hover:bg-white group-hover:shadow-md'
       }`}>
         {/* Undo the rotation for the icon itself in Game Mode */}

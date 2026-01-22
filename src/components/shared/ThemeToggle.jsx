@@ -11,7 +11,7 @@ const ThemeToggle = () => {
       className={`px-4 py-2 rounded-full text-xs md:text-sm font-medium cursor-pointer transition-colors ${
         mode === 'game'
           ? 'bg-cyan-500 text-black hover:bg-cyan-400'
-          : 'bg-slate-800 text-white hover:bg-slate-700'
+          : 'bg-slate-800 text-white hover:bg-slate-700 animate-bounce'
       }`}
     >
       {mode === 'game' ? t('hero.game.seePortfolio') : t('hero.software.seePortfolio')}

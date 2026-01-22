@@ -20,3 +20,86 @@
   background-image: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@theme {
+  --animate-pulse-varied: animpulse 2s linear infinite;
+  @keyframes animpulse {
+    0% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 0.4;
+    }
+    65% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.2;
+    }
+    85% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.2;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+
+  --animate-border-style: animborderstyle 1s linear infinite;
+  @keyframes animborderstyle {
+    0% {
+      border-style: solid;
+    }
+    25% {
+      border-style: dashed;
+    }
+    50% {
+      border-style: dotted;
+    }
+    75% {
+      border-style: dashed;
+    }
+    100% {
+      border-style: solid;
+    }
+  }
+
+  --animate-border-rotate-dots: animborderrotatedots 0.6s linear infinite;
+  @keyframes animborderrotatedots {
+    0%, 100% {
+      border-top-style: dotted;
+      border-right-style: dotted;
+      border-bottom-style: dashed;
+      border-left-style: solid;
+    }
+    25% {
+      border-top-style: solid;
+      border-right-style: dotted;
+      border-bottom-style: dotted;
+      border-left-style: dashed;
+    }
+    50% {
+      border-top-style: dashed;
+      border-right-style: solid;
+      border-bottom-style: dotted;
+      border-left-style: dotted;
+    }
+    75% {
+      border-top-style: dotted;
+      border-right-style: dashed;
+      border-bottom-style: solid;
+      border-left-style: dotted;
+    }
+  }
+}

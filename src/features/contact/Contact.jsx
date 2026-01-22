@@ -75,10 +75,10 @@ const Contact = () => {
             {contactMethods.map((method, idx) => (
                 <div
                 key={idx}
-                className={`p-4 ${
+                className={`p-4 border-2 ${
                     mode === 'game'
-                    ? 'border border-cyan-500 shadow-[0_0_10px_rgba(0,242,255,0.2)] hover:shadow-[0_0_15px_rgba(0,242,255,0.4)] transition-shadow'
-                    : 'border border-slate-300 shadow-sm hover:shadow-md transition-shadow'
+                    ? 'border-cyan-500 shadow-[0_0_10px_rgba(0,242,255,0.2)] hover:shadow-[0_0_15px_rgba(0,242,255,0.4)] transition-shadow animate-border-rotate-dots'
+                    : 'border-slate-300 shadow-sm hover:shadow-md transition-shadow'
                 }`}
                 >
                     <div className="flex justify-between items-center mb-2 text-sm md:text-xl">

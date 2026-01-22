@@ -8,7 +8,9 @@ const SectionLayout = ({ children, sectionHeader }) => {
   return (
     <div className={`max-w-7xl mx-auto py-8 px-8 ${mode === 'game' ? 'tracking-widest' : 'tracking-normal'}`}>
       <h2 className={`text-2xl md:text-4xl mb-8 md:mb-12 font-bold ${
-        mode === 'game' ? 'font-display italic text-cyan-400 uppercase' : 'font-sans text-slate-900'
+        mode === 'game'
+          ? 'font-display italic text-cyan-400 uppercase animate-pulse-varied'
+          : 'font-sans text-slate-900'
       }`}>
         {t(`sectionHeaders.${sectionHeader}`)}
       </h2>
