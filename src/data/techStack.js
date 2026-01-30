@@ -15,6 +15,9 @@ import APIIcon from '@assets/tech/api.png';
 import ViteIcon from '@assets/tech/Vitejs.png';
 import PostmanIcon from '@assets/tech/Postman.png';
 import SwiftIcon from '@assets/tech/Swift.png';
+import HTML5Icon from '@assets/tech/HTML5.png';
+import { html } from 'framer-motion/client';
+
 
 export const techStack = {
     react: {
@@ -102,4 +105,9 @@ export const techStack = {
         category: "frontend",
         iconPath: SwiftIcon
     },
+    html5: {
+        name: "HTML5",
+        category: "frontend",
+        iconPath: HTML5Icon
+    }
 };

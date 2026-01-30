@@ -9,8 +9,8 @@ const ProjectCard = ({ project }) => {
   return (
     <div className={`p-6 border ${
       mode === 'game' 
-        ? 'border-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.3)] animate-border-style' 
-        : 'border-slate-300 shadow-sm rounded-none'
+        ? 'bg-black/60 border-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.3)] animate-border-style' 
+        : 'bg-white/40 border-slate-300 shadow-sm rounded-none'
     }`}>
       <h3 className={`text-xl md:text-3xl font-semibold mb-2 ${
         mode === 'game' ? 'text-cyan-400 uppercase' : 'text-slate-900'

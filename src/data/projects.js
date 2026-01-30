@@ -3,6 +3,8 @@ import VolleyMarkPreview from "@assets/projects/VolleyMarkScreenshot.PNG";
 import FriendDebtsPreview from "@assets/projects/AppDeudasScreenshot.PNG";
 import BalloonSkywayPreview from "@assets/projects/BalloonSkywayScreenshot.PNG";
 import HeadlessAngelsPreview from "@assets/projects/HeadlessAngelsScreenshot.PNG";
+import PortfolioPreview from "@assets/projects/PortfolioScreenshot.PNG";
+import ObjectPoolingPreview from "@assets/projects/ObjectPoolingScreenshot.PNG";
 
 const projectType = {
   software: "software",
@@ -17,7 +19,7 @@ export const projects = [
             es: "Marcador de Voleibol",
         },
         type: projectType.software,
-        tech: [techStack.react, techStack.css],
+        tech: [techStack.react, techStack.css, techStack.javascript],
         description: {
             en: "A web app for tracking scores and player rotations during volleyball matches.",
             es: "Una aplicación web para llevar un registro de los marcadores y rotaciones de jugadores durante partidos de voleibol.",
@@ -82,4 +84,39 @@ export const projects = [
             { name: "Gameplay Video", url: "https://www.youtube.com/watch?v=DM7GSyqenjI"},
         ],
     },
+    {
+        id: 5,
+        title: {
+            en: "Portfolio",
+            es: "Portafolio",
+        },
+        type: projectType.software,
+        tech: [techStack.react, techStack.tailwind, techStack.javascript],
+        description: {
+            en: "My personal portfolio website, showcasing my skills and projects.",
+            es: "Mi sitio web personal, que muestra mis habilidades y proyectos.",
+        },
+        previewImg: PortfolioPreview,
+        links: [
+            { name: "GitHub Repo", url: "https://github.com/AnzaiaGitHub/Portfolio"}
+        ]
+    },
+    {
+        id: 6,
+        title: {
+            en: "Object Pooling System",
+            es: "Sistema de Pooling de Objetos",
+        },
+        type: projectType.game,
+        tech: [techStack.html5, techStack.css, techStack.javascript],
+        description: {
+            en: "A simple object pooling system in CodePen that allows for efficient management of objects in a game.",
+            es: "Un sistema de pooling de objetos simple que permite el manejo eficiente de objetos en un juego.",
+        },
+        previewImg: ObjectPoolingPreview,
+        links: [
+            { name: "CodePen", url: "https://codepen.io/AnzaiaGitHub/pen/LEPaarp/" }
+        ]
+    }
+
 ];

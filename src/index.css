@@ -2,7 +2,7 @@
 
 /* Software Mode - Clean & Minimalist */
 .software-mode {
-  --bg-primary: #ffffff;
+  --bg-primary: #c2d5d6;
   --text-main: #1a1a1a;
   --accent: #3b82f6;
   background-color: var(--bg-primary);

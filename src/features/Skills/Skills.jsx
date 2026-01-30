@@ -9,7 +9,7 @@ const Skills = () => {
   const skillCategories = [
     {
         category: 'frontend',
-        skills: [techStack.react, techStack.javascript, techStack.typescript, techStack.tailwind, techStack.css]
+        skills: [techStack.react, techStack.javascript, techStack.typescript, techStack.tailwind, techStack.css, techStack.html5]
     },
     {
         category: 'backend',
