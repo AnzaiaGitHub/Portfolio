@@ -5,6 +5,8 @@ import BalloonSkywayPreview from "@assets/projects/BalloonSkywayScreenshot.PNG";
 import HeadlessAngelsPreview from "@assets/projects/HeadlessAngelsScreenshot.PNG";
 import PortfolioPreview from "@assets/projects/PortfolioScreenshot.PNG";
 import ObjectPoolingPreview from "@assets/projects/ObjectPoolingScreenshot.PNG";
+import StockFlowPreview from "@assets/projects/StockFlowScreenshot.PNG";
+
 
 const projectType = {
   software: "software",
@@ -116,6 +118,23 @@ export const projects = [
         previewImg: ObjectPoolingPreview,
         links: [
             { name: "CodePen", url: "https://codepen.io/AnzaiaGitHub/pen/LEPaarp/" }
+        ]
+    },
+    {
+        id: 7,
+        title: {
+            en: "Stock Flow - Inventory Management",
+            es: "Manejo de Inventarios",
+        },
+        type: projectType.software,
+        tech: [techStack.flutter, techStack.opencode],
+        description: {
+            en: "Simple Stock Management Mobile app with dashboard tab and memory to handle products inventory.",
+            es: "Aplicación móvil sencilla de manejo de existencias con pantalla de estadísticas y memoria para gestionar el inventario de productos.",
+        },
+        previewImg: StockFlowPreview,
+        links: [
+            { name: "GitHub Repo", url: "https://github.com/AnzaiaGitHub/StockFlow" }
         ]
     }
 

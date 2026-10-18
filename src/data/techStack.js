@@ -16,8 +16,10 @@ import ViteIcon from '@assets/tech/Vitejs.png';
 import PostmanIcon from '@assets/tech/Postman.png';
 import SwiftIcon from '@assets/tech/Swift.png';
 import HTML5Icon from '@assets/tech/HTML5.png';
-import { html } from 'framer-motion/client';
-
+import FlutterIcon from '@assets/tech/Flutter.png';
+import OpenCodeIcon from '@assets/tech/OpenCode_Light.png';
+import JavaIcon from '@assets/tech/Java.png';
+import AngularIcon from '@assets/tech/Angular.png';
 
 export const techStack = {
     react: {
@@ -109,5 +111,25 @@ export const techStack = {
         name: "HTML5",
         category: "frontend",
         iconPath: HTML5Icon
+    },
+    flutter: {
+        name: "Flutter",
+        category: "frontend",
+        iconPath: FlutterIcon
+    },
+    opencode: {
+        name: "OpenCode",
+        category: "Artificial Intelligence",
+        iconPath: OpenCodeIcon
+    },
+    java: {
+        name: "Java",
+        category: "backend",
+        iconPath: JavaIcon
+    },
+    angular: {
+        name: "Angular",
+        category: "frontend",
+        iconPath: AngularIcon
     }
 };

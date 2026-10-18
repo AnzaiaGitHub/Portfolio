@@ -9,11 +9,11 @@ const Skills = () => {
   const skillCategories = [
     {
         category: 'frontend',
-        skills: [techStack.react, techStack.javascript, techStack.typescript, techStack.tailwind, techStack.css, techStack.html5]
+        skills: [techStack.react, techStack.javascript, techStack.typescript, techStack.tailwind, techStack.css, techStack.html5, techStack.angular]
     },
     {
         category: 'backend',
-        skills: [techStack.node, techStack.postgresql, techStack.mysql, techStack.restApi, techStack.nestjs]
+        skills: [techStack.node, techStack.postgresql, techStack.mysql, techStack.restApi, techStack.nestjs, techStack.java]
     },
     {
         category: 'gameDevelopment',
@@ -21,7 +21,7 @@ const Skills = () => {
     },
     {
         category: 'toolsAndOthers',
-        skills: [techStack.github, techStack.vite, techStack.postman, techStack.swiftUI, techStack.redis]
+        skills: [techStack.github, techStack.vite, techStack.postman, techStack.swiftUI, techStack.redis, techStack.opencode, techStack.flutter]
     }
   ];
 
